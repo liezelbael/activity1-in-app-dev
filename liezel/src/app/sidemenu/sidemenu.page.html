@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-left">
+      Users
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="secondary" [fullscreen]="true" >
+	<ion-list>
+		<ion-item color="secondary" *ngFor="let user of userlist; let i=index">
+		<ion-label>{{user.name}}</ion-label>
+		<ion-icon slot="end" (click)="showactionButtons(i)" name="ellipsis-vertical-outline"></ion-icon>
+	</ion-item>
+	</ion-list>
+</ion-content>
